@@ -1,0 +1,7 @@
+JIT session error: Symbols not found: [ atexit ]
+/usr/bin/lli-14: Failed to materialize symbols: { (main, { bmh_init, bmhi_search, lowervec, bmha_init, bmh_search, bmha_search, main, bhmi_cleanup, init_search, bmhi_init, strsearch }) }
+
+real	0m0.070s
+user	0m0.053s
+sys	0m0.014s
+0.082

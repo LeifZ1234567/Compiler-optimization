@@ -1,0 +1,8 @@
+Found dataset:  1
+Command line:   -fps -c ../../telecom_gsm_data/1.au > output_large.encode.gsm
+Loop wrap:      50
+
+
+real	0m1.211s
+user	0m1.138s
+sys	0m0.009s

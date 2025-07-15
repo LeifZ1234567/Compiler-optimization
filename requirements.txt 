@@ -1,0 +1,15 @@
+# Core dependencies
+#py310
+#llvm14.0.0
+numpy
+pandas
+scipy
+scikit-learn
+pyRAPL
+tqdm
+matplotlib
+seaborn
+joblib
+concurrent-logger
+llvmlite
+pycparser

@@ -1,0 +1,30 @@
+# ************ CCC - passing optimization flags ************ 
+ifeq ($(CCC_OPTS),)
+ CCC_OPTS =  
+endif
+ifeq ($(CCC_OPTS_ADD),)
+  CCC_OPTS_ADD =   -O3  
+endif
+
+# Declarations
+ifeq ($(ZCC),) 
+ ZCC = clang 
+endif
+ifeq ($(CC_OPTS),)
+ CC_OPTS = -emit-llvm -Xclang -disable-O0-optnone  
+endif
+ifeq ($(LDCC),)
+ LDCC = llvm-link 
+endif
+ifeq ($(LD_OPTS),)
+ LD_OPTS = -f -o a.out
+endif
+
+# Actions
+all:		
+	@ $(ZCC) $(CC_OPTS) -Wl -w -c *.c
+	@ $(LDCC) *.bc -o tmp.bc
+	@ opt $(CCC_OPTS_ADD) tmp.bc -o tmp.bc -enable-new-pm=0
+	@ $(LDCC) tmp.bc $(LD_OPTS) 
+clean:
+	@ rm -f a.out *.o *.a *.s *.i *.I *.bc *.ll
