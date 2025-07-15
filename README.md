@@ -1,4 +1,5 @@
-# Compiler Autotuning Framework with Hybrid Evolutionary Algorithms
+# Compiler Auto-Tuning via Sequence Generation and Flag and Selection
+
 
 ## Overview
 This framework implements a Compiler Auto-Tuning via Sequence Generation and Flag Selection. It supports:
